@@ -1,27 +1,15 @@
 package uk.ac.ed.inf;
 
 import com.sun.net.httpserver.HttpContext;
-import com.sun.net.httpserver.HttpExchange;
-import com.sun.net.httpserver.HttpHandler;
-import com.sun.net.httpserver.HttpServer;
 import junit.framework.TestCase;
-import org.junit.After;
 import org.junit.AfterClass;
-import org.junit.Before;
 import org.junit.BeforeClass;
 import uk.ac.ed.inf.client.ApiClient;
 import uk.ac.ed.inf.ilp.data.NamedRegion;
 import uk.ac.ed.inf.ilp.data.Order;
 import uk.ac.ed.inf.ilp.data.Restaurant;
 
-import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.io.PrintStream;
-import java.net.HttpURLConnection;
-import java.net.InetSocketAddress;
-import java.util.HashMap;
-
-import static junit.framework.Assert.*;
 import static uk.ac.ed.inf.utils.JsonValidator.isValidJson;
 
 public class TestApiClient extends TestCase {

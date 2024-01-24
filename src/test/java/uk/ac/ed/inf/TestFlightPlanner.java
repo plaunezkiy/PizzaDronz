@@ -1,25 +1,15 @@
 package uk.ac.ed.inf;
 
-import com.fasterxml.jackson.databind.util.Named;
 import junit.framework.TestCase;
-import org.junit.After;
-import org.junit.Before;
 import uk.ac.ed.inf.client.ApiClient;
 import uk.ac.ed.inf.ilp.constant.OrderStatus;
 import uk.ac.ed.inf.ilp.constant.OrderValidationCode;
 import uk.ac.ed.inf.ilp.data.*;
 import uk.ac.ed.inf.path.Cell;
 import uk.ac.ed.inf.path.FlightPlanner;
-import uk.ac.ed.inf.utils.LngLatHandler;
-
-
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.PrintStream;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
-import java.util.Calendar;
-import java.util.Date;
+
 import java.util.List;
 
 import static uk.ac.ed.inf.utils.JsonValidator.isValidJson;

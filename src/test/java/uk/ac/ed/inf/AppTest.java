@@ -1,27 +1,16 @@
 package uk.ac.ed.inf;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonParser;
-import org.junit.Test;
-import uk.ac.ed.inf.client.ApiClient;
 import uk.ac.ed.inf.ilp.constant.OrderStatus;
-import uk.ac.ed.inf.ilp.constant.SystemConstants;
 import uk.ac.ed.inf.ilp.data.*;
 
 import junit.framework.TestCase;
-import junit.framework.TestSuite;
-import uk.ac.ed.inf.path.FlightPlanner;
 
 import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
 import java.net.MalformedURLException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Objects;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
