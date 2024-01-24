@@ -41,7 +41,7 @@
           <groupId>uk.ac.ed.inf</groupId>
           <artifactId>IlpDataObjects</artifactId>
           <version>1.0</version>
-          <scope>compile</scope>
+          <scope>system</scope>
           <systemPath>${project.basedir}/src/main/resources/IlpDataObjects.jar</systemPath>
       </dependency>
 <!--      <dependency>-->
