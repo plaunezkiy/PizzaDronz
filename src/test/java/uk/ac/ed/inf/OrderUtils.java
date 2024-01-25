@@ -14,7 +14,7 @@ public class OrderUtils {
                 orderId,
                 LocalDate.now(),
                 OrderStatus.UNDEFINED,
-                OrderValidationCode.UNDEFINED,
+                OrderValidationCode.NO_ERROR,
                 0,
                 new Pizza[] {},
                 new CreditCardInformation()

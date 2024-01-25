@@ -12,8 +12,6 @@ import java.time.LocalDate;
 
 import java.util.List;
 
-import static uk.ac.ed.inf.utils.JsonValidator.isValidJson;
-
 public class TestFlightPlanner extends TestCase {
 
     public MockRestServer getMockServer() {
@@ -79,12 +77,12 @@ public class TestFlightPlanner extends TestCase {
 
         FlightPlanner planner = new FlightPlanner(dir, client);
         LngLat coordinateOne = new LngLat(0, 0);
-        LngLat coordinateTwo = new LngLat(0, 0.001);
+        LngLat coordinateTwo = new LngLat(0, 0.0001);
         String orderId = "ORDR1";
         planner.calculateOrderFlightPath(coordinateOne, coordinateTwo, orderId);
         List<Cell> path = planner.getOrderPath(orderId);
         for (Cell move : path) {
-            System.out.println(move.getCoordinates());
+            System.out.println(move);
         }
 
         boolean isValidPath = FlightPlannerUtils.checkValidPath(coordinateOne, coordinateTwo, path, new NamedRegion[] {});

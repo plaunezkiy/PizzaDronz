@@ -34,7 +34,6 @@ public class FlightPlannerUtils {
                 continue;
             }
             boolean isClose = lngLatHandler.isCloseTo(prevMove.getCoordinates(), move.getCoordinates());
-            System.out.println(isClose);
             if (!isClose) return false;
         }
         return true;
@@ -58,7 +57,6 @@ public class FlightPlannerUtils {
             boolean isClose = lngLatHandler.isCloseTo(position, move.getCoordinates());
             if (isClose) counter++;
         }
-        System.out.println(counter);
         return counter == N;
     }
 
@@ -66,7 +64,7 @@ public class FlightPlannerUtils {
         boolean isEmpty = path.toArray().length == 0;
         if (isEmpty) return false;
         boolean allAreClose = allAdjacentPathMovesAreClose(path);
-//        if (!allAreClose) return false;
+        if (!allAreClose) return false;
 
         boolean outsideNoFlyZones = checkNoPathMoveIsInNoFlyZone(path, noFlyZones);
         if (!outsideNoFlyZones) return false;
